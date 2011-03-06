@@ -9,6 +9,7 @@ App.Products = Ext.extend(App.GenericGrid, {
       gColumns: [{
         header: "ID",
         width: 40,
+        hidden: true,
         sortable: true,
         dataIndex: "id"
       }, {

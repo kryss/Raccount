@@ -45,11 +45,25 @@ App.Invoices = Ext.extend(Ext.Panel, {
           sortable: false,
           dataIndex: "desc",
           editor: new Ext.form.TextArea({})
+        }, {
+          header: "Quantity",
+          width: 75,
+          sortable: true,
+          dataIndex: "quantity",
+          editor: new Ext.form.NumberField({})
+        }, {
+          header: "Price",
+          width: 125,
+          sortable: false,
+          dataIndex: "price",
+          editor: new Ext.form.TextField({})
         }],
         gFields: [
           {name: "id"},
           {name: "product_id", allowBlank: false},
-          {name: "desc"}
+          {name: "desc"},
+          {name: "quantity", allowBlank: false},
+          {name: "price", allowBlank: false}
         ]
       }]
     };

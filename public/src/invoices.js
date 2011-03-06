@@ -2,6 +2,10 @@ Ext.namespace("App.Invoices");
 
 App.Invoices = Ext.extend(Ext.Panel, {
   initComponent: function() {
+    var products = new Array();
+    for (var i = 0; i < 100; ++i) {
+      products.push("Product #" + i);
+    }
     var config = {
       layout: "border",
       items: [{
@@ -9,7 +13,8 @@ App.Invoices = Ext.extend(Ext.Panel, {
         height: 75,
         collapsible: true,
         collapsed: false,
-        split: true,
+        collapseMode: "mini",
+        //split: true,
         layout: "column",
         style: "padding:3px;",
         defaults: {
@@ -37,26 +42,35 @@ App.Invoices = Ext.extend(Ext.Panel, {
           sortable: true,
           dataIndex: "product_id",
           editor: new Ext.form.ComboBox({
-            store: ['Product #1', 'Product #2', 'Product #3']
+            emptyText: "Select a product...",
+            mode: "local",
+            store: products/*,
+            pageSize: 15*/
           })
         }, {
           header: "Description",
           width: 150,
           sortable: false,
           dataIndex: "desc",
-          editor: new Ext.form.TextArea({})
+          editor: new Ext.form.TextArea({
+            emptyText: "Enter a description..."
+          })
         }, {
           header: "Quantity",
           width: 75,
           sortable: true,
           dataIndex: "quantity",
-          editor: new Ext.form.NumberField({})
+          editor: new Ext.form.NumberField({
+            emptyText: "Enter a quantity..."
+          })
         }, {
           header: "Price",
           width: 125,
           sortable: false,
           dataIndex: "price",
-          editor: new Ext.form.TextField({})
+          editor: new Ext.form.NumberField({
+            emptyText: "Enter a price..."
+          })
         }],
         gFields: [
           {name: "id"},
@@ -79,6 +93,7 @@ App.Invoices = Ext.extend(Ext.Panel, {
     }, {
       xtype:"textfield",
       name:"contact",
+      emptyText: "Choose a contact name...",
       style: "",
       columnWidth: 0.2
     }, {

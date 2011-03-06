@@ -23,13 +23,13 @@ App.Products = Ext.extend(App.GenericGrid, {
         width: 50,
         sortable: true,
         dataIndex: "price_buy",
-        editor: new Ext.form.TextField({})
+        editor: new Ext.form.NumberField({})
       }, {
         header: "Sell price",
         width: 50,
         sortable: true,
         dataIndex: "price_sell",
-        editor: new Ext.form.TextField({})
+        editor: new Ext.form.NumberField({})
       }, {
         header: "Description",
         width: 150,

@@ -87,7 +87,7 @@ App.Products = Ext.extend(Ext.grid.GridPanel, {
 	},
 
 	onDelete: function() {
-	    var rec = this.grid.getSelectionModel().getSelected();
+	    var rec = this.getSelectionModel().getSelected();
 	    if (!rec) {
 		return false;
 	    }

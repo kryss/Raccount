@@ -1,0 +1,238 @@
+1299430651
+Application	/home/kryss/railsDev/Raccount/config/application.rb	  class Application 
+ApplicationController	/home/kryss/railsDev/Raccount/app/controllers/application_controller.rb	class ApplicationController 
+ApplicationHelper	/home/kryss/railsDev/Raccount/app/helpers/application_helper.rb	module ApplicationHelper
+BrowsingTest	/home/kryss/railsDev/Raccount/test/performance/browsing_test.rb	class BrowsingTest 
+Client	/home/kryss/railsDev/Raccount/app/models/client.rb	class Client 
+ClientTest	/home/kryss/railsDev/Raccount/test/unit/client_test.rb	class ClientTest 
+ClientsController	/home/kryss/railsDev/Raccount/app/controllers/clients_controller.rb	class ClientsController 
+ClientsControllerTest	/home/kryss/railsDev/Raccount/test/functional/clients_controller_test.rb	class ClientsControllerTest 
+ClientsHelper	/home/kryss/railsDev/Raccount/app/helpers/clients_helper.rb	module ClientsHelper
+ClientsHelperTest	/home/kryss/railsDev/Raccount/test/unit/helpers/clients_helper_test.rb	class ClientsHelperTest 
+Contact	/home/kryss/railsDev/Raccount/app/models/contact.rb	class Contact 
+ContactTest	/home/kryss/railsDev/Raccount/test/unit/contact_test.rb	class ContactTest 
+ContactsController	/home/kryss/railsDev/Raccount/app/controllers/contacts_controller.rb	class ContactsController 
+ContactsControllerTest	/home/kryss/railsDev/Raccount/test/functional/contacts_controller_test.rb	class ContactsControllerTest 
+ContactsHelper	/home/kryss/railsDev/Raccount/app/helpers/contacts_helper.rb	module ContactsHelper
+ContactsHelperTest	/home/kryss/railsDev/Raccount/test/unit/helpers/contacts_helper_test.rb	class ContactsHelperTest 
+CreateClients	/home/kryss/railsDev/Raccount/db/migrate/20110306130824_create_clients.rb	class CreateClients 
+CreateContacts	/home/kryss/railsDev/Raccount/db/migrate/20110306125519_create_contacts.rb	class CreateContacts 
+DeviseCreateUsers	/home/kryss/railsDev/Raccount/db/migrate/20110306083435_devise_create_users.rb	class DeviseCreateUsers 
+HomeController	/home/kryss/railsDev/Raccount/app/controllers/home_controller.rb	class HomeController 
+HomeControllerTest	/home/kryss/railsDev/Raccount/test/functional/home_controller_test.rb	class HomeControllerTest 
+HomeHelper	/home/kryss/railsDev/Raccount/app/helpers/home_helper.rb	module HomeHelper
+HomeHelperTest	/home/kryss/railsDev/Raccount/test/unit/helpers/home_helper_test.rb	class HomeHelperTest 
+RAccount	/home/kryss/railsDev/Raccount/config/application.rb	module RAccount
+Str	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function Str(key, holder, stack)
+TestCase	/home/kryss/railsDev/Raccount/test/test_helper.rb	class ActiveSupport::TestCase
+Type	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function Type(o)
+User	/home/kryss/railsDev/Raccount/app/models/user.rb	class User 
+UserTest	/home/kryss/railsDev/Raccount/test/unit/user_test.rb	class UserTest 
+abs	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function abs()
+absolutize	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function absolutize(element)
+addMethods	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function addMethods(source)
+addText	/home/kryss/railsDev/Raccount/public/javascripts/controls.js	function addText(mode, condition)
+all	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function all(iterator, context)
+any	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function any(iterator, context)
+argumentNames	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function argumentNames()
+bind	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function bind(context)
+bindAsEventListener	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function bindAsEventListener(context)
+blank	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function blank()
+camelize	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function camelize()
+capitalize	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function capitalize()
+ceil	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function ceil()
+checkDeficiency	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function checkDeficiency(tagName)
+checkReadyState	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function checkReadyState()
+clear	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function clear()
+clone	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function clone()
+clone	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function clone()
+clone	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function clone(object)
+collect	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function collect(iterator, context)
+compact	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function compact()
+concat	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function concat()
+copy	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function copy(methods, destination, onlyIfAbsent)
+create	/home/kryss/railsDev/Raccount/app/controllers/clients_controller.rb	  def create
+create	/home/kryss/railsDev/Raccount/app/controllers/contacts_controller.rb	  def create
+create	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function create()
+cssNameFor	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function cssNameFor(key)
+cumulativeOffset	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function cumulativeOffset(element)
+cumulativeScrollOffset	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function cumulativeScrollOffset(element)
+curry	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function curry()
+dasherize	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function dasherize()
+defer	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function defer()
+define	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function define(D)
+delay	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function delay(timeout)
+destroy	/home/kryss/railsDev/Raccount/app/controllers/clients_controller.rb	  def destroy
+destroy	/home/kryss/railsDev/Raccount/app/controllers/contacts_controller.rb	  def destroy
+detect	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function detect(iterator, context)
+dirCheck	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function dirCheck( dir, cur, doneName, checkSet, nodeCheck, isXML )
+dirNodeCheck	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function dirNodeCheck( dir, cur, doneName, checkSet, nodeCheck, isXML )
+dispatch	/home/kryss/railsDev/Raccount/public/javascripts/effects.js	function dispatch(effect, eventName)
+down	/home/kryss/railsDev/Raccount/db/migrate/20110306083435_devise_create_users.rb	  def self.down
+down	/home/kryss/railsDev/Raccount/db/migrate/20110306125519_create_contacts.rb	  def self.down
+down	/home/kryss/railsDev/Raccount/db/migrate/20110306130824_create_clients.rb	  def self.down
+each	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function each(iterator)
+each	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function each(iterator, context)
+eachSlice	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function eachSlice(number, iterator, context)
+edit	/home/kryss/railsDev/Raccount/app/controllers/clients_controller.rb	  def edit
+edit	/home/kryss/railsDev/Raccount/app/controllers/contacts_controller.rb	  def edit
+element	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function element(event)
+empty	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function empty()
+endsWith	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function endsWith(pattern)
+escapeHTML	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function escapeHTML()
+evalJSON	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function evalJSON(sanitize)
+evalScripts	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function evalScripts()
+extend	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function extend(destination, source)
+extend	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function extend(tagName)
+extendElementWith	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function extendElementWith(element, methods)
+extendElements	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function extendElements(elements)
+extractScripts	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function extractScripts()
+fallback	/home/kryss/railsDev/Raccount/public/javascripts/controls.js	function fallback(name, expr)
+find	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function find(elements, expression, index)
+findAll	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function findAll(iterator, context)
+findDOMClass	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function findDOMClass(tagName)
+findElement	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function findElement(event, expression)
+fire	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function fire(element, eventName, memo, bubble)
+fireContentLoadedEvent	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function fireContentLoadedEvent()
+first	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function first()
+flatten	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function flatten()
+floor	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function floor()
+get	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function get(key)
+getDimensions	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function getDimensions(element)
+getLayout	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function getLayout(element, preCompute)
+getOffsetParent	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function getOffsetParent(element)
+getPixelValue	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function getPixelValue(value, property)
+getRootElement	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function getRootElement()
+grep	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function grep(filter, iterator, context)
+gsub	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function gsub(pattern, replacement)
+handleMethod	/home/kryss/railsDev/Raccount/public/javascripts/rails.js	function handleMethod(element)
+handleRemote	/home/kryss/railsDev/Raccount/public/javascripts/rails.js	function handleRemote(element)
+inGroupsOf	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function inGroupsOf(number, fillWith)
+include	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function include(object)
+include	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function include(pattern)
+include	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function include(value)
+index	/home/kryss/railsDev/Raccount/app/controllers/clients_controller.rb	  def index
+index	/home/kryss/railsDev/Raccount/app/controllers/contacts_controller.rb	  def index
+index	/home/kryss/railsDev/Raccount/app/controllers/home_controller.rb	  def index
+index	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function index(value)
+indexOf	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function indexOf(item, i)
+initialize	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function initialize(object)
+initialize	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function initialize(start, end, exclusive)
+inject	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function inject(memo, iterator, context)
+inspect	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function inspect()
+inspect	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function inspect()
+inspect	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function inspect()
+inspect	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function inspect(object)
+inspect	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function inspect(useDoubleQuotes)
+interpolate	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function interpolate(object, pattern)
+intersect	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function intersect(array)
+invoke	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function invoke(method)
+isArray	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function isArray(object)
+isBody	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function isBody(element)
+isDetached	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function isDetached(element)
+isDisplayed	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function isDisplayed(element)
+isElement	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function isElement(object)
+isEventSupported	/home/kryss/railsDev/Raccount/public/javascripts/rails.js	function isEventSupported(eventName)
+isForm	/home/kryss/railsDev/Raccount/public/javascripts/rails.js	function isForm(element)
+isFunction	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function isFunction(object)
+isHash	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function isHash(object)
+isInput	/home/kryss/railsDev/Raccount/public/javascripts/rails.js	function isInput(element)
+isJSON	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function isJSON()
+isLeftClick	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function isLeftClick(event)   { return _isButton(event, 0)
+isMiddleClick	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function isMiddleClick(event) { return _isButton(event, 1)
+isNumber	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function isNumber(object)
+isRightClick	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function isRightClick(event)  { return _isButton(event, 2)
+isString	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function isString(object)
+isUndefined	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function isUndefined(object)
+iter	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function iter(name)
+keys	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function keys()
+keys	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function keys(object)
+klass	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function klass()
+last	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function last()
+lastIndexOf	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function lastIndexOf(item, i)
+match	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function match()
+match	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function match(element, selector)
+max	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function max(iterator, context)
+measure	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function measure(element, property)
+merge	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function merge(array, args)
+merge	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function merge(object)
+methodize	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function methodize()
+min	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function min(iterator, context)
+new	/home/kryss/railsDev/Raccount/app/controllers/clients_controller.rb	  def new
+new	/home/kryss/railsDev/Raccount/app/controllers/contacts_controller.rb	  def new
+observe	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function observe(element, eventName, handler)
+on	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function on(element, eventName, selector, callback)
+parseColor	/home/kryss/railsDev/Raccount/public/javascripts/effects.js	function parseColor(color)
+parseJSON	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function parseJSON()
+partition	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function partition(iterator, context)
+pluck	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function pluck(property)
+pointer	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function pointer(event)
+pointerX	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function pointerX(event)
+pointerY	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function pointerY(event)
+pollDoScroll	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function pollDoScroll()
+positionedOffset	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function positionedOffset(element)
+prepareReplacement	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function prepareReplacement(replacement)
+purgeElement	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function purgeElement(element)
+reject	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function reject(iterator, context)
+relativize	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function relativize(element)
+reverse	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function reverse(inline)
+round	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function round()
+scan	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function scan(pattern, iterator)
+select	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function select()
+select	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function select(selector, scope)
+set	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function set(key, value)
+show	/home/kryss/railsDev/Raccount/app/controllers/clients_controller.rb	  def show
+show	/home/kryss/railsDev/Raccount/app/controllers/contacts_controller.rb	  def show
+size	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function size()
+size	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function size()
+sortBy	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function sortBy(iterator, context)
+startsWith	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function startsWith(pattern)
+stop	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function stop(event)
+stopObserving	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function stopObserving(element, eventName, handler)
+stringify	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function stringify(object)
+strip	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function strip()
+stripAlpha	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function stripAlpha(filter)
+stripScripts	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function stripScripts()
+stripTags	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function stripTags()
+sub	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function sub(pattern, replacement, count)
+subclass	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function subclass()
+succ	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function succ()
+succ	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function succ()
+test_homepage	/home/kryss/railsDev/Raccount/test/performance/browsing_test.rb	  def test_homepage
+times	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function times(count)
+times	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function times(iterator, context)
+toArray	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function toArray()
+toArray	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function toArray()
+toCSSPixels	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function toCSSPixels(number)
+toColorPart	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function toColorPart()
+toDecimal	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function toDecimal(pctString)
+toHTML	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function toHTML(object)
+toISOString	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function toISOString()
+toJSON	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function toJSON()
+toJSON	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function toJSON(value)
+toObject	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function toObject()
+toPaddedString	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function toPaddedString(length, radix)
+toQueryPair	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function toQueryPair(key, value)
+toQueryParams	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function toQueryParams(separator)
+toQueryString	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function toQueryString()
+toQueryString	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function toQueryString(object)
+truncate	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function truncate(length, truncation)
+underscore	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function underscore()
+unescapeHTML	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function unescapeHTML()
+unfilterJSON	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function unfilterJSON(filter)
+uniq	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function uniq(sorted)
+unset	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function unset(key)
+up	/home/kryss/railsDev/Raccount/db/migrate/20110306083435_devise_create_users.rb	  def self.up
+up	/home/kryss/railsDev/Raccount/db/migrate/20110306125519_create_contacts.rb	  def self.up
+up	/home/kryss/railsDev/Raccount/db/migrate/20110306130824_create_clients.rb	  def self.up
+update	/home/kryss/railsDev/Raccount/app/controllers/clients_controller.rb	  def update
+update	/home/kryss/railsDev/Raccount/app/controllers/contacts_controller.rb	  def update
+update	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function update(array, args)
+update	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function update(element, content)
+update	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function update(object)
+values	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function values()
+values	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function values(object)
+viewportOffset	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function viewportOffset(forElement)
+without	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function without()
+wrap	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function wrap(wrapper)
+zip	/home/kryss/railsDev/Raccount/public/javascripts/prototype.js	function zip()

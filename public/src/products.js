@@ -12,7 +12,7 @@ App.Products = Ext.extend(Ext.grid.GridPanel, {
 		    successProperty: "success",
 		    messagePorperty: "message",
 		    idProperty: "id",
-		    root: "data"
+		    root: "product"
 		}, [
 	    {name: "id"},
 	    {name: "ref", allowBlank: false},

@@ -55,6 +55,16 @@ App.GenericGrid = Ext.extend(Ext.grid.GridPanel, {
 	    scope: this,
 	    click: this.onDelete
 	  }
+        }, "->", {
+          xtype: "textfield",
+          width: 150,
+          emptyText: "Search " + this.gRoot + "s..."
+        }, {
+          text: "Search",
+          listeners: {
+            scope: this,
+            click: this.onSearch
+          }
         }]
       },
       viewConfig: {
@@ -99,6 +109,10 @@ App.GenericGrid = Ext.extend(Ext.grid.GridPanel, {
       return false;
     }
     this.getStore().remove(rec);
+  },
+
+  onSearch: function() {
+    Ext.Msg.alert("Status", "Not implemented yet.");
   }
 });
 

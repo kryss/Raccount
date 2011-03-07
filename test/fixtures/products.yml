@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  ref: MyString
+  desc: MyString
+  price_buy: 9.99
+  price_sell: 9.99
+  user_id: 1
+
+two:
+  ref: MyString
+  desc: MyString
+  price_buy: 9.99
+  price_sell: 9.99
+  user_id: 1

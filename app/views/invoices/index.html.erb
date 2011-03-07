@@ -1,0 +1,49 @@
+<h1>Listing invoices</h1>
+
+<table>
+  <tr>
+    <th>Contact</th>
+    <th>Invoice type</th>
+    <th>Invoice num</th>
+    <th>Is paid</th>
+    <th>Date</th>
+    <th>Date due</th>
+    <th>Tax rate</th>
+    <th>Sub total</th>
+    <th>Total</th>
+    <th>Note</th>
+    <th>Paid type</th>
+    <th>Paid at</th>
+    <th>Is simple invoice</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @invoices.each do |invoice| %>
+  <tr>
+    <td><%= invoice.contact_id %></td>
+    <td><%= invoice.invoice_type %></td>
+    <td><%= invoice.invoice_num %></td>
+    <td><%= invoice.is_paid %></td>
+    <td><%= invoice.date %></td>
+    <td><%= invoice.date_due %></td>
+    <td><%= invoice.tax_rate %></td>
+    <td><%= invoice.sub_total %></td>
+    <td><%= invoice.total %></td>
+    <td><%= invoice.note %></td>
+    <td><%= invoice.paid_type %></td>
+    <td><%= invoice.paid_at %></td>
+    <td><%= invoice.is_simple_invoice %></td>
+    <td><%= invoice.user_id %></td>
+    <td><%= link_to 'Show', invoice %></td>
+    <td><%= link_to 'Edit', edit_invoice_path(invoice) %></td>
+    <td><%= link_to 'Destroy', invoice, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Invoice', new_invoice_path %>

@@ -41,19 +41,11 @@ class ContactsController < ApplicationController
      
     @contact = Contact.new(params[:contact])
     
-    # logger.debug "PPPPPPPPPP : #{params}"
-    # logger.debug "DDDDDDDDDDDD : #{@contact}"
-    # 
-  
-      if @contact.save
-        render :json => { :success => true, :message => "Created new contact #{@contact.id}", :contacts => @contact }
-        #format.html { redirect_to(@contact, :notice => 'contact was successfully created.') }
-        #format.xml  { render :xml => @contact, :status => :created, :location => @contact }
-      else
-        #format.html { render :action => "new" }
-        #format.xml  { render :xml => @contact.errors, :status => :unprocessable_entity }
-        render :json => { :success => false, :message => "Failed to create contact"}
-      end
+    if @contact.save
+      render :json => { :success => true, :message => "Created new contact #{@contact.id}", :contacts => @contact }
+    else
+      render :json => { :success => false, :message => "Failed to create contact"}
+    end
     
     # @contact = Contact.new(params[:contact])
     # 

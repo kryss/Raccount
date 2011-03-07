@@ -1,0 +1,33 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  contact_id: 1
+  invoice_type: 1
+  invoice_num: 1
+  is_paid: false
+  date: 2011-03-07
+  date_due: 2011-03-07
+  tax_rate: 1
+  sub_total: 9.99
+  total: 9.99
+  note: MyString
+  paid_type: MyString
+  paid_at: 2011-03-07
+  is_simple_invoice: false
+  user_id: 1
+
+two:
+  contact_id: 1
+  invoice_type: 1
+  invoice_num: 1
+  is_paid: false
+  date: 2011-03-07
+  date_due: 2011-03-07
+  tax_rate: 1
+  sub_total: 9.99
+  total: 9.99
+  note: MyString
+  paid_type: MyString
+  paid_at: 2011-03-07
+  is_simple_invoice: false
+  user_id: 1

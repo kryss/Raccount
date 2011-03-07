@@ -1,4 +1,6 @@
 RAccount::Application.routes.draw do
+  resources :invoices
+
   resources :products
 
   resources :clients

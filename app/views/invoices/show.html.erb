@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Contact:</b>
+  <%= @invoice.contact_id %>
+</p>
+
+<p>
+  <b>Invoice type:</b>
+  <%= @invoice.invoice_type %>
+</p>
+
+<p>
+  <b>Invoice num:</b>
+  <%= @invoice.invoice_num %>
+</p>
+
+<p>
+  <b>Is paid:</b>
+  <%= @invoice.is_paid %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @invoice.date %>
+</p>
+
+<p>
+  <b>Date due:</b>
+  <%= @invoice.date_due %>
+</p>
+
+<p>
+  <b>Tax rate:</b>
+  <%= @invoice.tax_rate %>
+</p>
+
+<p>
+  <b>Sub total:</b>
+  <%= @invoice.sub_total %>
+</p>
+
+<p>
+  <b>Total:</b>
+  <%= @invoice.total %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @invoice.note %>
+</p>
+
+<p>
+  <b>Paid type:</b>
+  <%= @invoice.paid_type %>
+</p>
+
+<p>
+  <b>Paid at:</b>
+  <%= @invoice.paid_at %>
+</p>
+
+<p>
+  <b>Is simple invoice:</b>
+  <%= @invoice.is_simple_invoice %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @invoice.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_invoice_path(@invoice) %> |
+<%= link_to 'Back', invoices_path %>

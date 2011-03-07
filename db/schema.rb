@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110307090247) do
+ActiveRecord::Schema.define(:version => 20110307094130) do
 
   create_table "clients", :force => true do |t|
     t.string   "name"
@@ -30,6 +30,25 @@ ActiveRecord::Schema.define(:version => 20110307090247) do
     t.datetime "updated_at"
     t.string   "phone"
     t.string   "fax"
+  end
+
+  create_table "invoices", :force => true do |t|
+    t.integer  "contact_id"
+    t.integer  "invoice_type"
+    t.integer  "invoice_num"
+    t.boolean  "is_paid"
+    t.date     "date"
+    t.date     "date_due"
+    t.integer  "tax_rate"
+    t.decimal  "sub_total"
+    t.decimal  "total"
+    t.string   "note"
+    t.string   "paid_type"
+    t.date     "paid_at"
+    t.boolean  "is_simple_invoice"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "products", :force => true do |t|

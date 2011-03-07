@@ -2,9 +2,9 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.xml
   def index
-    @num_page = (params[:page].nil?) ? 0 : params[:page]
-    @products = Product.paginate :page => @num_page
-    
+    #@num_page = (params[:page].nil?) ? 0 : params[:page]
+    #@products = Product.paginate :page => @num_page
+    @products = Product.all
     render :json => { :success => true, :message => "List All Products", :products => @products }
      # format.html # index.html.erb
     # format.xml  { render :xml => @products }    

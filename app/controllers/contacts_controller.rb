@@ -2,11 +2,10 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.xml
   def index
-    @contacts = Contact.paginate :page => params[:page]
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @contacts }
-    end
+    #@contacts = Contact.paginate :page => params[:page]
+    
+    @contacts = Contact.all
+    render :json => { :success => true, :message => "List All Contacts", :contacts => @contacts }
   end
 
   # GET /contacts/1
@@ -39,17 +38,34 @@ class ContactsController < ApplicationController
   # POST /contacts
   # POST /contacts.xml
   def create
+     
     @contact = Contact.new(params[:contact])
-
-    respond_to do |format|
+    
+    # logger.debug "PPPPPPPPPP : #{params}"
+    # logger.debug "DDDDDDDDDDDD : #{@contact}"
+    # 
+  
       if @contact.save
-        format.html { redirect_to(@contact, :notice => 'Contact was successfully created.') }
-        format.xml  { render :xml => @contact, :status => :created, :location => @contact }
+        render :json => { :success => true, :message => "Created new contact #{@contact.id}", :contacts => @contact }
+        #format.html { redirect_to(@contact, :notice => 'contact was successfully created.') }
+        #format.xml  { render :xml => @contact, :status => :created, :location => @contact }
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @contact.errors, :status => :unprocessable_entity }
+        #format.html { render :action => "new" }
+        #format.xml  { render :xml => @contact.errors, :status => :unprocessable_entity }
+        render :json => { :success => false, :message => "Failed to create contact"}
       end
-    end
+    
+    # @contact = Contact.new(params[:contact])
+    # 
+    # respond_to do |format|
+    #   if @contact.save
+    #     format.html { redirect_to(@contact, :notice => 'Contact was successfully created.') }
+    #     format.xml  { render :xml => @contact, :status => :created, :location => @contact }
+    #   else
+    #     format.html { render :action => "new" }
+    #     format.xml  { render :xml => @contact.errors, :status => :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PUT /contacts/1

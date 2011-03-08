@@ -4,7 +4,7 @@ class InvoicesController < ApplicationController
   def index
     
     @invoices = Invoice.all
-    render :json => { :success => true, :message => "List All Invoices", :invoices => @invoices }
+    render :json => { :success => true, :message => "List All Invoices", :invoice => @invoices }
     # @invoices = Invoice.all
     # 
     # respond_to do |format|

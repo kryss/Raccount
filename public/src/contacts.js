@@ -29,6 +29,14 @@ App.Contacts = Ext.extend(App.GenericGrid, {
           emptyText: "Enter phone number..."
         })
       }, {
+        header: "Fax",
+        width: 100,
+        sortable: true,
+        dataIndex: "fax",
+        editor: new Ext.form.TextField({
+          emptyText: "Enter fax..."
+        })
+      }, {
         header: "Email",
         width: 100,
         sortable: true,
@@ -36,12 +44,22 @@ App.Contacts = Ext.extend(App.GenericGrid, {
         editor: new Ext.form.TextField({
           emptyText: "Enter email..."
         })
+      }, {
+        header: "Note",
+        width: 100,
+        sortable: true,
+        dataIndex: "note",
+        editor: new Ext.form.TextArea({
+          emptyText: "Enter note..."
+        })
       }],
       gFields: [
         {name: "id"},
         {name: "name", allowBlank: false},
         {name: "phone"},
-        {name: "email"}
+        {name: "fax"},
+        {name: "email"},
+        {name: "note"}
       ]
     };
     Ext.apply(this, config);

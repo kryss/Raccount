@@ -2,10 +2,7 @@ Ext.namespace("App.Invoices");
 
 App.Invoices = Ext.extend(Ext.Panel, {
   initComponent: function() {
-    var products = new Array();
-    for (var i = 0; i < 100; ++i) {
-      products.push("Product #" + i);
-    }
+    this.productsCombo = new App.ProductsCombo({});
     var config = {
       layout: "border",
       items: [{
@@ -41,12 +38,9 @@ App.Invoices = Ext.extend(Ext.Panel, {
           width: 100,
           sortable: true,
           dataIndex: "product_id",
-          editor: new Ext.form.ComboBox({
-            emptyText: "Select a product...",
-            mode: "local",
-            store: products/*,
-            pageSize: 15*/
-          })
+	  scope: this,
+          editor: this.productsCombo,
+	  renderer: this.renderProduct
         }, {
           header: "Description",
           width: 150,
@@ -135,6 +129,15 @@ App.Invoices = Ext.extend(Ext.Panel, {
       style: "",
       columnWidth: 0.2
     }];
+  },
+
+  renderProduct: function(value, metaData, record, rowIndex, colIndex, store) {
+    var store = this.productsCombo.getStore();
+    var product = store.getById(value);
+    if (Ext.isObject(product)) {
+	return product.get("ref");
+    }
+    return value;
   }
 });
 

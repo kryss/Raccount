@@ -17,11 +17,27 @@ App.Main = Ext.extend(Ext.Viewport, {
 	    border: false
 	  }
 	}, {
+	  title: "Stocks",
+          layout: "fit",
+          border: false,
+          items: {
+            xtype: "app-stocks",
+            border: false
+          }
+	}, {
 	  title: "Contacts",
           layout: "fit",
           border: false,
           items: {
             xtype: "app-contacts",
+            border: false
+          }
+        }, {
+          title: "Orders",
+          layout: "fit",
+          border: false,
+          items: {
+            xtype: "app-orders",
             border: false
           }
         }, {

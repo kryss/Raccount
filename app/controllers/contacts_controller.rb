@@ -5,7 +5,7 @@ class ContactsController < ApplicationController
     #@contacts = Contact.paginate :page => params[:page]
     
     @contacts = Contact.all
-    render :json => { :success => true, :message => "List All Contacts", :contacts => @contacts }
+    render :json => { :success => true, :message => "List All Contacts", :contact => @contacts }
   end
 
   # GET /contacts/1

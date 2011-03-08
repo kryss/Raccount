@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
     #@num_page = (params[:page].nil?) ? 0 : params[:page]
     #@products = Product.paginate :page => @num_page
     @products = Product.all
-    render :json => { :success => true, :message => "List All Products", :products => @products }
+    render :json => { :success => true, :message => "List All Products", :product => @products }
      # format.html # index.html.erb
     # format.xml  { render :xml => @products }    
   end

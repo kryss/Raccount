@@ -14,11 +14,11 @@ class ProductsController < ApplicationController
   # GET /products/1.xml
   def show
     @product = Product.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @product }
-    end
+    render :json => { :success => true, :message => "Show Products", :product => @product }
+    # respond_to do |format|
+    #   format.html # show.html.erb
+    #   format.xml  { render :xml => @product }
+    # end
   end
 
   # GET /products/new
@@ -54,12 +54,12 @@ class ProductsController < ApplicationController
     
     @product = Product.new(params[:product])
     
-    logger.debug "PPPPPPPPPP : #{params}"
-    logger.debug "DDDDDDDDDDDD : #{@product}"
+    # logger.debug "PPPPPPPPPP : #{params}"
+    # logger.debug "DDDDDDDDDDDD : #{@product}"
   
   
       if @product.save
-        render :json => { :success => true, :message => "Created new product #{@product.id}", :products => @product }
+        render :json => { :success => true, :message => "Created new product #{@product.id}", :product => @product }
         #format.html { redirect_to(@product, :notice => 'Product was successfully created.') }
         #format.xml  { render :xml => @product, :status => :created, :location => @product }
       else
@@ -75,15 +75,17 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
 
-    respond_to do |format|
+    # respond_to do |format|
       if @product.update_attributes(params[:product])
-        format.html { redirect_to(@product, :notice => 'Product was successfully updated.') }
-        format.xml  { head :ok }
+        # format.html { redirect_to(@product, :notice => 'Product was successfully updated.') }
+        # format.xml  { head :ok }
+        render :json => { :success => true, :message => "Update product #{@product.id}", :product => @product }
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @product.errors, :status => :unprocessable_entity }
+        # format.html { render :action => "edit" }
+        # format.xml  { render :xml => @product.errors, :status => :unprocessable_entity }
+        render :json => { :success => false, :message => "Failed to update product"}
       end
-    end
+    # end
   end
 
   # DELETE /products/1
@@ -92,9 +94,10 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @product.destroy
 
-    respond_to do |format|
-      format.html { redirect_to(products_url) }
-      format.xml  { head :ok }
-    end
+    # respond_to do |format|
+    #   format.html { redirect_to(products_url) }
+    #   format.xml  { head :ok }
+    # end
+    render :json => { :success => true, :message => "Delete product #{@product.id}", :product => @product }
   end
 end

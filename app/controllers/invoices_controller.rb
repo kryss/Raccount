@@ -17,11 +17,11 @@ class InvoicesController < ApplicationController
   # GET /invoices/1.xml
   def show
     @invoice = Invoice.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @invoice }
-    end
+    render :json => { :success => true, :message => "Show invoice", :invoice => @invoice }
+    # respond_to do |format|
+    #   format.html # show.html.erb
+    #   format.xml  { render :xml => @invoice }
+    # end
   end
 
   # GET /invoices/new
@@ -46,7 +46,7 @@ class InvoicesController < ApplicationController
     @invoice = Invoice.new(params[:invoice])
     
     if @invoice.save
-      render :json => { :success => true, :message => "Created new invoice #{@invoice.id}", :invoices => @invoice }
+      render :json => { :success => true, :message => "Created new invoice #{@invoice.id}", :invoice => @invoice }
     else
       render :json => { :success => false, :message => "Failed to create invoice"}
     end
@@ -69,15 +69,18 @@ class InvoicesController < ApplicationController
   def update
     @invoice = Invoice.find(params[:id])
 
-    respond_to do |format|
+    # respond_to do |format|
       if @invoice.update_attributes(params[:invoice])
-        format.html { redirect_to(@invoice, :notice => 'Invoice was successfully updated.') }
-        format.xml  { head :ok }
+        
+        # format.html { redirect_to(@invoice, :notice => 'Invoice was successfully updated.') }
+        # format.xml  { head :ok }
+        render :json => { :success => true, :message => "Created new invoice #{@invoice.id}", :invoice => @invoice }
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @invoice.errors, :status => :unprocessable_entity }
+        render :json => { :success => false, :message => "Failed to create invoice"}
+        # format.html { render :action => "edit" }
+        # format.xml  { render :xml => @invoice.errors, :status => :unprocessable_entity }
       end
-    end
+    # end
   end
 
   # DELETE /invoices/1
@@ -85,10 +88,11 @@ class InvoicesController < ApplicationController
   def destroy
     @invoice = Invoice.find(params[:id])
     @invoice.destroy
+    render :json => { :success => true, :message => "Delete product #{@invoice.id}", :invoice => @invoice }
 
-    respond_to do |format|
-      format.html { redirect_to(invoices_url) }
-      format.xml  { head :ok }
-    end
+    # respond_to do |format|
+    #   format.html { redirect_to(invoices_url) }
+    #   format.xml  { head :ok }
+    # end
   end
 end

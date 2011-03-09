@@ -12,11 +12,11 @@ class ContactsController < ApplicationController
   # GET /contacts/1.xml
   def show
     @contact = Contact.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @contact }
-    end
+    render :json => { :success => true, :message => "Show Contacts", :contact => @contact }
+    # respond_to do |format|
+    #   format.html # show.html.erb
+    #   format.xml  { render :xml => @contact }
+    # end
   end
 
   # GET /contacts/new
@@ -42,7 +42,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(params[:contact])
     
     if @contact.save
-      render :json => { :success => true, :message => "Created new contact #{@contact.id}", :contacts => @contact }
+      render :json => { :success => true, :message => "Created new contact #{@contact.id}", :contact => @contact }
     else
       render :json => { :success => false, :message => "Failed to create contact"}
     end
@@ -65,15 +65,17 @@ class ContactsController < ApplicationController
   def update
     @contact = Contact.find(params[:id])
 
-    respond_to do |format|
+    # respond_to do |format|
       if @contact.update_attributes(params[:contact])
-        format.html { redirect_to(@contact, :notice => 'Contact was successfully updated.') }
-        format.xml  { head :ok }
+        # format.html { redirect_to(@contact, :notice => 'Contact was successfully updated.') }
+        # format.xml  { head :ok }
+        render :json => { :success => true, :message => "Created new client #{@contact.id}", :contact => @contact }
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @contact.errors, :status => :unprocessable_entity }
+        render :json => { :success => false, :message => "Failed to create contact"}
+        # format.html { render :action => "edit" }
+        # format.xml  { render :xml => @contact.errors, :status => :unprocessable_entity }
       end
-    end
+    # end
   end
 
   # DELETE /contacts/1
@@ -81,10 +83,10 @@ class ContactsController < ApplicationController
   def destroy
     @contact = Contact.find(params[:id])
     @contact.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(contacts_url) }
-      format.xml  { head :ok }
-    end
+    render :json => { :success => true, :message => "Delete product #{@client.id}", :client => @client }
+    # respond_to do |format|
+    #   format.html { redirect_to(contacts_url) }
+    #   format.xml  { head :ok }
+    # end
   end
 end

@@ -1,0 +1,11 @@
+# Typus Roles Configuration File
+#
+# Use the README file as a reference to customize settings.
+
+admin:
+  Client: create, read, update, delete
+  Contact: create, read, update, delete
+  Invoice: create, read, update, delete
+  Order: create, read, update, delete
+  Product: create, read, update, delete
+  User: create, read, update, delete

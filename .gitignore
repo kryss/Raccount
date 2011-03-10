@@ -1,5 +1,6 @@
 .redcar
 .bundle
+.redcar
 db/*.sqlite3
 log/*.log
 tmp/

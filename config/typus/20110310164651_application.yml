@@ -1,0 +1,65 @@
+# Typus Models Configuration File
+#
+# Use the README file as a reference to customize settings.
+
+Client:
+  fields:
+    default: name, email, user_id, user
+    form: name, email, user_id, user
+  order_by: 
+  relationships: user
+  filters: created_at
+  search: name
+  application: Raccount
+
+Contact:
+  fields:
+    default: name, email, user_id, note, phone, fax, user, contact_type
+    form: name, email, user_id, note, phone, fax, user, contact_type    
+  order_by:
+  relationships: user
+  
+  filters: created_at, contact_type
+  search: name
+  application: Raccount
+
+Invoice:
+  fields:
+    default: invoice_num, contact_id, contact, is_paid, date, date_due, tax_rate, sub_total, total, note, paid_at, is_simple_invoice, user_id, user
+    form:  invoice_num, contact_id, contact, is_paid, date, date_due, tax_rate, sub_total, total, note, paid_at, is_simple_invoice, user_id, user
+  order_by: 
+  relationships: user, contact, products 
+  filters: created_at
+  search: invoice_num
+  application: Raccount
+
+Order:
+  fields:
+    default: invoice_id, product_id, quantity, unit_price, invoice, product
+    form: invoice_id, product_id, quantity, unit_price, invoice, product
+  order_by: 
+  relationships: invoice, product
+  filters: created_at
+  search: 
+  application: Raccount
+
+Product:
+  fields:
+    default: ref, desc, price_buy, price_sell, user_id, user
+    form: ref, desc, price_buy, price_sell, user_id, user
+  order_by: 
+  relationships: products, user
+  filters: created_at
+  search: ref
+  application: Raccount
+
+User:
+  fields:
+    default: email, remember_token, sign_in_count, current_sign_in_at, last_sign_in_at, current_sign_in_ip, last_sign_in_ip
+    form: email, reset_password_token, remember_token, sign_in_count, current_sign_in_at, last_sign_in_at, current_sign_in_ip, last_sign_in_ip
+  order_by: 
+  relationships: clients, contacts, invoices, products
+  filters: created_at
+  search: email
+  application: Raccount
+

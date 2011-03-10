@@ -1,4 +1,4 @@
-1299702934
+1299703170
 AddPhoneToContact	/home/kryss/railsDev/Raccount/db/migrate/20110307090247_add_phone_to_contact.rb	class AddPhoneToContact 
 Application	/home/kryss/railsDev/Raccount/config/application.rb	  class Application 
 ApplicationController	/home/kryss/railsDev/Raccount/app/controllers/application_controller.rb	class ApplicationController 

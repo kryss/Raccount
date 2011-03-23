@@ -4,8 +4,14 @@ class ContactsController < ApplicationController
   def index
     #@contacts = Contact.paginate :page => params[:page]
     
-    @contacts = Contact.all
-    render :json => { :success => true, :message => "List All Contacts", :contact => @contacts }
+    @start = (params[:start].nil?) ? 0 : params[:start]
+		@limit = (params[:limit].nil?) ? 10 : params[:limit]
+		@sort = (params[:sort].nil?) ? 'id' : params[:sort]
+		@dir = (params[:dir].nil?) ? 'ASC' : params[:dir]
+    @contacts = Contact.limit(@limit).offset(@start).order(@sort + " " + @dir)
+		@count = Contact.count
+
+    render :json => { :success => true, :message => "List All Contacts", :total => @count, :contact => @contacts }
   end
 
   # GET /contacts/1

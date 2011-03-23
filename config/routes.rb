@@ -7,6 +7,8 @@ RAccount::Application.routes.draw do
 
   resources :contacts
 
+	resources :orders
+
   devise_for :users
 
   root :to => "home#index"

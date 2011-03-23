@@ -4,8 +4,13 @@ class ProductsController < ApplicationController
   def index
     #@num_page = (params[:page].nil?) ? 0 : params[:page]
     #@products = Product.paginate :page => @num_page
-    @products = Product.all
-    render :json => { :success => true, :message => "List All Products", :product => @products }
+		@start = (params[:start].nil?) ? 0 : params[:start]
+		@limit = (params[:limit].nil?) ? 10 : params[:limit]
+		@sort = (params[:sort].nil?) ? 'id' : params[:sort]
+		@dir = (params[:dir].nil?) ? 'ASC' : params[:dir]
+    @products = Product.limit(@limit).offset(@start).order(@sort + " " + @dir)
+		@count = Product.count
+    render :json => { :success => true, :message => "List All Products", :total => @count, :product => @products }
      # format.html # index.html.erb
     # format.xml  { render :xml => @products }    
   end

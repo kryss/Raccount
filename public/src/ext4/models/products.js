@@ -1,7 +1,9 @@
 Ext.regModel('Product', {
+	idProperty: 'id',
 	fields: [{
 		name: 'id',
-		type: 'int'
+		type: 'int',
+		useNull: true
 	}, {
 		name: 'ref',
 		type: 'string',
@@ -15,72 +17,98 @@ Ext.regModel('Product', {
 	}, {
 		name: 'price_sell',
 		type: 'float'
+	}],
+	validations: [{
+		type: 'length',
+		field: 'ref',
+		min: 1
 	}]
 });
 
 Ext.define('App.Products.Grid', {
-	extend: 'Ext.grid.GridPanel',
+	extend: 'Ext.grid.Panel',
 	alias: 'widget.app.products.grid',
 	store: Ext.create('Ext.data.Store', {
 		model: 'Product',
 		autoLoad: true,
+		autoSync: true,
 		proxy: {
 			type: 'rest',
 			url: '/products',
 			reader: {
 				type: 'json',
-				root: 'product',
-				successProperty: 'success',
-				messageProperty: 'message'
+				root: 'product'
+			},
+			writer: {
+				type: 'json'
 			}
 		}
 	}),
-	plugins: Ext.create('Ext.grid.RowEditing', {
-		editors: [{
-			name: 'ref',
-			xtype: 'textfield'
-		}, {
-			name: 'price_buy',
-			xtype: 'numberfield'
-		}, {
-			name: 'price_sell',
-			xtype: 'numberfield'
-		}, {
-			name: 'desc',
-			xtype: 'textarea'
+	dockedItems: [{
+		xtype: 'toolbar',
+		items: [{
+			text: 'Add',
+			iconCls: 'icon-add',
+			listeners: {
+				scope: this,
+				click: function(button, event) {
+					var grid = button.ownerCt.ownerCt;
+					grid.store.insert(0, new Product());
+					grid.plugins[0].startEdit(0, 0);
+				}
+			}
+		}, '-', {
+			text: 'Delete',
+			iconCls: 'icon-delete',
+			listeners: {
+				scope: this,
+				click: function(button, event) {
+					var grid = button.ownerCt.ownerCt;
+					var selection = grid.getView().getSelectionModel().getSelection()[0];
+					if (selection) {
+						grid.store.remove(selection);
+					}
+				}
+			}
 		}]
-	}),
+	}],
+	plugins: [Ext.create('Ext.grid.plugin.RowEditing')],
 	headers: [{
+		text: 'Id',
+		dataIndex: 'id',
+		hidden: true
+	}, {
 		text: 'Reference',
 		flex: 2,
 		sortable: true,
-		dataIndex: 'ref'
+		dataIndex: 'ref',
+		field: {
+			xtype: 'textfield'
+		}
 	}, {
 		text: 'Buy price',
 		flex: 1,
 		sortable: true,
-		dataIndex: 'price_buy'
+		dataIndex: 'price_buy',
+		field: {
+			xtype: 'numberfield'
+		}
 	}, {
 		text: 'Sell price',
 		flex: 1,
 		sortable: true,
-		dataIndex: 'price_sell'
+		dataIndex: 'price_sell',
+		field: {
+			xtype: 'numberfield'
+		}
 	}, {
 		text: 'Description',
 		flex: 1.5,
 		sortable: false,
-		dataIndex: 'desc'
-	}]
-});
-
-Ext.define('App.Products.Form', {
-	extend: 'Ext.form.FormPanel',
-	alias: 'widget.app.products.form',
-	layout: {
-		type: 'column'
-	},
-	items: [{
-		xtype: 'textfield'
+		dataIndex: 'desc',
+		field: {
+			xtype: 'textarea'
+		}
 	}]
 });
 
@@ -88,18 +116,9 @@ Ext.define('App.Products.Panel', {
 	extend: 'Ext.panel.Panel',
 	alias: 'widget.products',
 	layout: {
-		type: 'border',
-		margin: 3
+		type: 'fit'
 	},
 	items: [{
-		xtype: 'app.products.grid',
-		region: 'center'
-	}, {
-		xtype: 'app.products.form',
-		region: 'east',
-		frame: true,
-		title: 'Edit form',
-		collapsible: true,
-		width: 250
+		xtype: 'app.products.grid'
 	}]
 });

@@ -6,15 +6,16 @@
 <script type="text/javascript" src="/src/stocks.js"></script>
 <script type="text/javascript" src="/src/orders.js"></script>
 <script type="text/javascript" src="/src/products.js"></script>
+<script type="text/javascript" src="/src/invoice.js"></script>
 <script type="text/javascript" src="/src/invoices.js"></script>
 <script type="text/javascript" src="/src/contacts.js"></script>
 <script type="text/javascript" src="/src/app.js"></script>
 
 <script type="text/javascript">
   Ext.onReady(function() {
-  Ext.QuickTips.init();
+	Ext.QuickTips.init();
 
-  var app = new App.Main();
+	var app = new App.Main({});
   });
 </script>
 
@@ -22,13 +23,14 @@
 <script type="text/javascript" src="/src/ext4/models/products.js"></script>
 <script type="text/javascript" src="/src/ext4/app.js"></script>
 <script type="text/javascript">
-  <!--
-  Ext.require(['*']);
+  Ext.Loader.setConfig({
+	enabled: true
+  });
+  Ext.require([
+	'Ext.*'
+  ]);
   Ext.onReady(function() {
-	Ext.QuickTips.init();
-
 	var app = Ext.create("App.Main", {});
   });
-  // -->
 </script>
 -->

@@ -1,13 +1,13 @@
 Ext.namespace("App.GenericGrid");
 
-App.GenericGrid = Ext.extend(Ext.grid.GridPanel, {
+App.GenericGrid = Ext.extend(Ext.grid.EditorGridPanel, {
 	gRoot: "",
 	gFields: "",
 	gColumns: "",
 	gUrl: "",
 	gIdProperty: "",
 
-	initComponent:function() {
+	initComponent: function() {
 		this.c_editor = new Ext.ux.grid.RowEditor({
 			saveText: "Save",
 			listeners: {
@@ -34,16 +34,17 @@ App.GenericGrid = Ext.extend(Ext.grid.GridPanel, {
 			encode: false
 		});
 
-		this.c_store = new Ext.data.Store({
+		var storeConfig = this.storeConfig || {};
+		this.store = new Ext.data.Store(Ext.apply(storeConfig, {
 			restful: true,
 			proxy: this.c_proxy,
 			reader: this.c_reader,
 			writer: this.c_writer,
 			remoteSort: true
-		});
+		}));
 
 		var config = {
-			store: this.c_store,
+			store: this.store,
 			plugins: [
 			this.c_editor
 			],
@@ -82,18 +83,14 @@ App.GenericGrid = Ext.extend(Ext.grid.GridPanel, {
 			viewConfig: {
 				forceFit: true
 			},
-			listeners: {
-				scope: this,
-				afterrender: this.onAfterRender
-			},
 			bbar: new Ext.PagingToolbar({
 				pageSize: 10,
-				store: this.c_store,
+				store: this.store,
 				displayInfo: true,
 				displayMsg: 'Displaying ' + this.gRoot + ' {0} - {1} of {2}',
 				emptyMsg: "No " + this.gRoot + " to display"
 			}),
-			selModel: new Ext.grid.CheckboxSelectionModel({
+			selModel: new Ext.grid.RowSelectionModel({
 				singleSelect: true,
 				listeners: {
 					scope: this,
@@ -114,10 +111,6 @@ App.GenericGrid = Ext.extend(Ext.grid.GridPanel, {
 		this.getTopToolbar().refDeleteButton.disable();
 	},
 
-	onAfterRender: function() {
-		this.getStore().load();
-	},
-
 	onSave: function() {
 		this.getStore().save();
 	},
@@ -127,9 +120,9 @@ App.GenericGrid = Ext.extend(Ext.grid.GridPanel, {
 		var defaultData = {};
 		for (var i in this.gColumns) {
 			if (Ext.isObject(this.gColumns[i]) &&
-				Ext.isString(this.gColumns[i]["name"]) &&
-				this.gColumns[i]["name"] != this.gIdProperty) {
-				defaultData[this.gColumns[i]["name"]] = "";
+				Ext.isString(this.gColumns[i]["dataIndex"]) &&
+				this.gColumns[i]["dataIndex"] != this.gIdProperty) {
+				defaultData[this.gColumns[i]["dataIndex"]] = this.gColumns[i].defaultValue || "";
 			}
 		}
 		var u = new store.recordType(defaultData);

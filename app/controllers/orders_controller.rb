@@ -5,8 +5,9 @@ class OrdersController < ApplicationController
 		@limit = (params[:limit].nil?) ? 10 : params[:limit]
 		@sort = (params[:sort].nil?) ? 'id' : params[:sort]
 		@dir = (params[:dir].nil?) ? 'ASC' : params[:dir]
-    @orders = Order.limit(@limit).offset(@start).order(@sort + " " + @dir)
-		@count = Order.count
+		@invoice = (params[:invoice_id].nil?) ? 0 : params[:invoice_id]
+    @orders = Order.limit(@limit).where(:invoice_id => @invoice).offset(@start).order(@sort + " " + @dir)
+		@count = Order.where(:invoice_id => @invoice).count
     render :json => { :success => true, :message => "List All orders", :total => @count, :order => @orders }
   end
 

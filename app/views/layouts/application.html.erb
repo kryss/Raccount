@@ -2,18 +2,21 @@
 <html>
 <head>
   <title>Raccount</title>
-  <%= stylesheet_link_tag "web-app-theme/base", "web-app-theme/themes/djime-cerulean/style", "web-app-theme/override", :cache => true %>
-  <%= javascript_include_tag :defaults, :cache => true %>
-  <%= csrf_meta_tag %>
+<%=
+  ##stylesheet_link_tag "web-app-theme/base", "web-app-theme/themes/djime-cerulean/style", "web-app-theme/override", :cache => true
+  #javascript_include_tag :defaults, :cache => true
+  #csrf_meta_tag
+%>
+  
   <link rel="stylesheet" type="text/css" href="/javascripts/extjs/resources/css/ext-all.css" />
   <link rel="stylesheet" type="text/css" href="/javascripts/ux/RowEditor.css" />
   <script type="text/javascript" src="/javascripts/extjs/adapter/ext/ext-base.js"></script>
   <script type="text/javascript" src="/javascripts/extjs/ext-all.js"></script>
-  <script type="text/javascript" src="/javascripts/ux/Ext.ux.data.PagingMemoryProxy.js"></script>
   <script type="text/javascript" src="/javascripts/ux/RowEditor.js"></script>
+  <script type="text/javascript" src="/javascripts/ux/TabCloseMenu.js"></script>
   <!--
-  <link rel="stylesheet" type="text/css" href="http://zoon.org/framework/javascript/ext-4.0-pr5/resources/css/ext-all.css" />
-  <script type="text/javascript" src="http://zoon.org/framework/javascript/ext-4.0-pr5/bootstrap.js"></script>
+  <link rel="stylesheet" type="text/css" href="/javascripts/extjs4/resources/css/ext-all.css" />
+  <script type="text/javascript" src="/javascripts/extjs4/bootstrap.js"></script>
   -->
 </head>
 <body>

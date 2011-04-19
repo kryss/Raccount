@@ -2,8 +2,12 @@ class InvoicesController < ApplicationController
   # GET /invoices
   # GET /invoices.xml
   def index
-    
-    @invoices = Invoice.all
+
+		if params[:invoice_id].nil?
+	    @invoices = Invoice.all
+		else
+			@invoices = Invoice.where(:id => params[:invoice_id])
+		end
     render :json => { :success => true, :message => "List All Invoices", :invoice => @invoices }
     # @invoices = Invoice.all
     # 

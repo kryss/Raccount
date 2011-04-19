@@ -1,9 +1,14 @@
 Ext.namespace("App.GenericStore");
 
 App.GenericStore = Ext.extend(Ext.data.Store, {
+	gUrl: null,
+	gRoot: null,
+	gFields: null,
+	gIdProperty: null,
+
 	constructor: function(config) {
 		Ext.apply(this, config);
-		var internal = {
+		config = Ext.applyIf(config, {
 			restful: true,
 			autoLoad: true,
 			proxy: new Ext.data.HttpProxy({
@@ -21,7 +26,7 @@ App.GenericStore = Ext.extend(Ext.data.Store, {
 			writer: new Ext.data.JsonWriter({
 				encode: false
 			})
-		};
-		App.GenericStore.superclass.constructor.call(this, internal);
+		});
+		App.GenericStore.superclass.constructor.call(this, config);
 	}
 });

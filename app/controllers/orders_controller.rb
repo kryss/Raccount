@@ -42,8 +42,9 @@ class OrdersController < ApplicationController
 
   def update
     @order = Order.find(params[:id])
-
+    
 		if @order.update_attributes(params[:order])
+		  update_invoice(@order)
 			render :json => { :success => true, :message => "Update order #{@order.id}", :order => @order }
 		else
 			render :json => { :success => false, :message => "Failed to update order"}
@@ -56,4 +57,9 @@ class OrdersController < ApplicationController
 
     render :json => { :success => true, :message => "Delete order #{@order.id}", :order => @order }
   end
+  
+private
+  def update_invoice(order)
+    order.invoice.calc_total
+  end  
 end

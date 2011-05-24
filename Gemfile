@@ -14,7 +14,7 @@ gem 'typus', :git => 'https://github.com/fesplugas/typus.git'
 
 group :development, :test do
   gem 'annotate-models'
-  gem 'ruby-debug19'
+  gem 'ruby-debug'
   gem 'web-app-theme'
 end
 
